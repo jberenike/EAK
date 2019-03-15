@@ -1,15 +1,9 @@
-### Part III: Data-Driven Literary Studies. ###
-
-#This part addresses the role of digital corpora as the precondition for non-linear modes of literary reading. 
-#It sketches a digitally enhanced literary studies with regard to modeling, building, and annotating digital corpora. 
-#Responding to the need for externalization of procedure, I detail practical and conceptual criteria to be observed for corpus modeling, which are elucidated by 
-#reference to two corpora - a comprehensive corpus, KOLIMO (KOrpus der Literarischen Moderne; https://kolimo.uni-goettingen.de/index.htm; 
-# https://gitlab.gwdg.de/kolimo/exist-app), and a specialized and intensively annotated one, the EAK (Erzählanfangskorpus, corpus of narrative openings). 
-
-#The following code pertains to a quantitative case study that zooms in on EAK as a specialized sub sample of KOLIMO (a selection of 35 opening sections of 
-#German narrative prose between 1850 and 1930). 
-#In order to facilitate non-linear reading in the shape of a corpus-stylistic study of vividness, these fragments were coded for metaphorical language use and 
-#part of speech. 
+#The following code pertains to a quantitative case study that zooms in on EAK as a specialized sub sample of KOLIMO (a selection of 35 
+#opening sections of German narrative prose between 1850 and 1930). 
+#In order to facilitate non-linear reading in the shape of a corpus-stylistic study of vividness, these fragments were coded for 
+#metaphorical language use and part of speech. The script runs chi-square tests, Cramer's V, and renders standardized residuals to explore 
+#the cells that contribute to the general association between variables. I thank my former student assistant Markus Paluch for his support
+#in setting up this research!
 
 install.packages("lsr") # if not installed
 library(lsr)
