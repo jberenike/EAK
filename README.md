@@ -32,4 +32,5 @@ More can be read here:
 
 Herrmann, J. B. (2018). Anschaulichkeit messen. Eine quantitative Metaphernanalyse an deutschsprachigen Erzählanfängen zwischen 1880 und 1926. In T. Köppe & R. Singer (Eds.), Show, don’t tell: Konzepte und Strategien anschaulichen Erzählens. Bielefeld: Aisthesis. 167-212. (for an author's copy, or if you have questions, please contact me at juliaberenike@gmail.com).
 
-Note: I am sincerly thankful to Markus Paluch for his support and hard work with scripting and stats!
+## Note
+I thank my former student assistants - Markus Paluch's hard work with scripting and stats has been a great support, and Lisa Hannemann did a wonderful job at coding metaphor.
