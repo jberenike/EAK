@@ -2,7 +2,7 @@
 This repository pertains to the third part of my habilitation ("Digital Literary Stylistics. Enhanced Humanities") which addresses the role of digital corpora as the precondition for non-linear modes of literary reading. Responding to the need for externalization of procedure in DH, I detail practical and conceptual quality criteria to be observed when modeling, constructing, and enriching corpora. By practical application, I describe two corpora:
 
 - A comprehensive corpus, KOLIMO (KOrpus der LIterarischen MOderne - Corpus of Literary Moderism, see https://kolimo.uni-goettingen.de/index.htm and https://gitlab.gwdg.de/kolimo/exist-app).
-- A specialized and intensively annotated corpus, the EAK (Erzählanfangskorpus - Corpus of narrative openings), __published in this repository__. 
+- A specialized and intensively annotated corpus, the __EAK (Erzählanfangskorpus - Corpus of narrative openings), published in this repository__. 
 
 ## What's new
 This repository contains the EAK. In addition, there is a simple R-code for testing statistical association between variables (chi-square-test; Cramer's V as an indicator of effect size; and standardized residuals for identifying the contributing cells). For retracing the statistical analysis, there is a feature matrix (and two other aggregated spreadsheets).
