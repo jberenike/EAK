@@ -16,7 +16,7 @@ Here is an overview of the texts: https://github.com/jberenike/EAK/wiki
 ## This repository contains:
 - The EAK, represented as a spreadsheet (version 3/19), with Texts by IDs. It comprises tokens, lemmata, part of speech (STTS tag set, https://www.ims.uni-stuttgart.de/forschung/ressourcen/lexika/TagSets/stts-table.html)* and codes for relation to metaphor. Metaphor was coded by means of the MIPVU manual for German. The procedure is detailed in:
 
-      Herrmann, J.B., Woll, K., & Dorst. A.G (accepted). Linguistic Metaphor Identification in German, in: Nacey, S., Dorst, A.G., Krennmayr, T., & W.G. Reijnierse (Hg.). MIPVU in Multiple Languages. Amsterdam: John Benjamins. (for an author's copy, please contact me at juliaberenike@gmail.com) 	
+      Herrmann, J.B., Woll, K., & Dorst. A.G (2019). Linguistic Metaphor Identification in German, in: Nacey, S., Dorst, A.G., Krennmayr, T., & W.G. Reijnierse (Hg.). MIPVU in Multiple Languages. Amsterdam: John Benjamins. (for an author's copy, please contact me at juliaberenike@gmail.com) 	
 
 - A feature matrix (another spreadsheet) which comprises several metadata and textual features, including readability values, part of speech and metaphor counts. 
 - A simple R-Code for statistical anaylsis accompannied by two more spreadsheets with aggregated numbers (indicated in the R-Code).

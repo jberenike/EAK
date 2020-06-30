@@ -1,32 +1,44 @@
+####################################################
+###                   Intro                      ###
+# J.B. Herrmann (Dh Lab Basel)                    #
+####################################################
 #The following code pertains to a quantitative case study that zooms in on EAK as a specialized sub sample of KOLIMO (a selection of 35 
 #opening sections of German narrative prose between 1850 and 1930). 
+
 #In order to facilitate non-linear reading in the shape of a corpus-stylistic study of vividness, these fragments were coded for 
 #metaphorical language use and part of speech. The script runs chi-square tests, Cramer's V, and renders standardized residuals to explore 
 #the cells that contribute to the general association between variables. I thank my former student assistant Markus Paluch for his support
 #in setting up this research!
 
-install.packages("lsr") # if not installed
-library(lsr)
+if (!require("lsr")) install.packages("lsr") # calls library "lsr" and first installs if absent
 options(skipen=999)
-setwd("C:\\Users\\ThinkPad User\\Git\\metaphor\\Metaphor_2019") # set to own wd
+setwd("~/GitHub/EAK") # set to own wd
 
 ####################################################
 ### Chi-Quadrat Test: MRW und Non-MRW über Texte ###
 ####################################################
 # This test assesses whether "relation to metaphor" (MRW/Non_MRW) is statistically associated with "text" (ID1 - ID35)
 
-d <- read.table("EAK_Merkmalsmatrix.csv", sep=";", dec=",",header=T)
 
-sink("chisq.test_MRW_NONMRW_fuer_absolute_Haeufigkeiten.txt") # gibt Ergebnis des chi-quadrat-Tests aus
+d <- read_delim("EAK_Merkmalsmatrix.csv", ";", escape_double = FALSE, trim_ws = TRUE)
+View(d) #35 entries, 47 total columns
+str(d)
 
-cat("\n\n ## MRW x nonMRW ## \n")
+
+sink("chisq.test_MRW_NONMRW_fuer_absolute_Haeufigkeiten.txt") # writes results as .txt file to disk
+
+cat("\n\n ## MRW x nonMRW ## \n") # heading within that .txt file
+
 a <- matrix(c(d$MRW, d$nonMRW),nrow=35)
 chisq.test(a)
-cat("\n\n ## Cramer's V ## \n") #Effektgrösse
+
+cat("\n\n ## Cramer's V ## \n") #effect size
 cramersV(a)
-cat("\n\n ## Expected ## \n") # Erwartete Häufigkeiten
+
+cat("\n\n ## Expected ## \n") # expected frequencies
 data.frame(chisq.test(a)$expected)
-cat("\n\n ## Residuen ## \n") #Standardisierte Residuen
+
+cat("\n\n ## Residuen ## \n") # standardized residuals 
 data.frame(chisq.test(a)$residuals)
 
 exp <- data.frame(chisq.test(a)$expected)
@@ -34,8 +46,8 @@ res <- data.frame(chisq.test(a)$residuals)
 
 er <- data.frame(exp,res)
 colnames(er) <- c("Erwartungswert_MRW","Erwartungswert_nonMRW","Standardisierte Residuen_MRW","Standardisierte Residuen_nonMRW")
-write.table(er, "std.residuen_und_Erwartungswert_fuer_MRW_und_nonMRW.csv",sep="\t") # gibt u.a. die die standardisierten Residuen für MRW/NonMRW pro Text aus
-
+write.table(er, "std.residuen_und_Erwartungswert_fuer_MRW_und_nonMRW.csv",sep="\t") # standard. Res. for MRW/NonMRW per text
+sink()
 
 ###################################################
 ###  Chi-Quadrat Test: MRW/Non-MRW und Wortart  ###
